@@ -40,11 +40,11 @@ int OpteeKeymaster::Initialize() {
         return err;
     }
 
-    ConfigureRequest req;
+    ConfigureRequest req(message_version());
     req.os_version = GetOsVersion();
     req.os_patchlevel = GetOsPatchlevel();
 
-    ConfigureResponse rsp;
+    ConfigureResponse rsp(message_version());
     Configure(req, &rsp);
 
     if (rsp.error != KM_ERROR_OK) {
@@ -184,21 +184,21 @@ void OpteeKeymaster::AbortOperation(const AbortOperationRequest& request,
 
 /* Methods for Keymaster 4.0 functionality -- not yet implemented */
 GetHmacSharingParametersResponse OpteeKeymaster::GetHmacSharingParameters() {
-    GetHmacSharingParametersResponse response;
+    GetHmacSharingParametersResponse response(message_version());
     response.error = KM_ERROR_UNIMPLEMENTED;
     return response;
 }
 
 ComputeSharedHmacResponse OpteeKeymaster::ComputeSharedHmac(
         const ComputeSharedHmacRequest& /* request */) {
-    ComputeSharedHmacResponse response;
+    ComputeSharedHmacResponse response(message_version());
     response.error = KM_ERROR_UNIMPLEMENTED;
     return response;
 }
 
 VerifyAuthorizationResponse OpteeKeymaster::VerifyAuthorization(
         const VerifyAuthorizationRequest& /* request */) {
-    VerifyAuthorizationResponse response;
+    VerifyAuthorizationResponse response(message_version());
     response.error = KM_ERROR_UNIMPLEMENTED;
     return response;
 }

@@ -43,7 +43,7 @@ cc_binary {
         "libhardware_legacy",
         "libhidlbase",
         "libhwbinder",
-        "libkeymaster4support",
+        "libkeymaster4_1support",
     ],
     init_rc: ["wait_for_keymaster_optee.rc"],
 }

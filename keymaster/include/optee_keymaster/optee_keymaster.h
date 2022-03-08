@@ -59,6 +59,9 @@ class OpteeKeymaster {
 	GetHmacSharingParametersResponse GetHmacSharingParameters();
 	ComputeSharedHmacResponse ComputeSharedHmac(const ComputeSharedHmacRequest& request);
 	VerifyAuthorizationResponse VerifyAuthorization(const VerifyAuthorizationRequest& request);
+	int32_t message_version() const { return message_version_; }
+private:
+	static constexpr int32_t message_version_ = kDefaultMessageVersion;
 };
 
 } // namespace keymaster

@@ -86,7 +86,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libhardware_legacy \
 	libhidlbase \
 	libhwbinder \
-	libkeymaster4support
+	libkeymaster4_1support
 
 include $(BUILD_EXECUTABLE)
 
