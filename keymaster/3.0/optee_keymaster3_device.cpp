@@ -20,7 +20,7 @@
 #include <memory>
 #include <new>
 
-#include <authorization_set.h>
+#include <keymaster/authorization_set.h>
 #include <keymaster/android_keymaster_messages.h>
 #include <optee_keymaster/optee_keymaster3_device.h>
 #include <optee_keymaster/ipc/optee_keymaster_ipc.h>
@@ -49,7 +49,7 @@ using ::keymaster::ImportKeyRequest;
 using ::keymaster::ImportKeyResponse;
 using ::keymaster::UpdateOperationRequest;
 using ::keymaster::UpdateOperationResponse;
-using ::keymaster::ng::Tag;
+using ::android::hardware::keymaster::V3_0::Tag;
 
 namespace keymaster {
 
